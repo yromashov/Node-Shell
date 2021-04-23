@@ -1,4 +1,4 @@
-module.exports = function () {
-  process.stdout.write(__dirname);
-  process.stdout.write("\nprompt > ");
-}
+const bash = require("./bash.js");
+module.exports = (done) => {
+  done(__dirname);
+};

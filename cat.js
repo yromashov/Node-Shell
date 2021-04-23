@@ -1,13 +1,11 @@
-const fs =  require('fs')
+const fs = require("fs");
 
-module.exports = function (fileName) {
-  fs.readFile('./' + fileName, (err, data) => {
+module.exports = function (fileName, done) {
+  fs.readFile("./" + fileName, (err, data) => {
     if (err) {
-      throw err
+      done("Something went wrong!");
+    } else {
+      done(data);
     }
-    else {
-      process.stdout.write(data)
-      process.stdout.write("\nprompt > ")
-    }
-  })
-}
+  });
+};
