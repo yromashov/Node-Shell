@@ -4,8 +4,8 @@ module.exports = function (link, done) {
     if (error) {
       done("Something went wrong!");
     } else {
-      done(console.log("statusCode:", response && response.statusCode)); // Print the response status code if a response was received
-      done(console.log("body:", body)); // Print the HTML for the Google homepage.
+      done("statusCode:", response && response.statusCode); // Print the response status code if a response was received
+      done(body); // Print the HTML for the Google homepage.
     }
   });
 };
