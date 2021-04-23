@@ -1,4 +1,3 @@
-
 module.exports = (done) => {
-  done(__dirname);
+  done(process.cwd().trim());
 };

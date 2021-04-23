@@ -1,9 +1,9 @@
 process.stdout.write("prompt >");
 
 const done = (output) => {
-  process.stdout.write(output);
-  process.stdout.write("\nprompt > ");
-};
+    process.stdout.write(output);
+    process.stdout.write("\nprompt >");
+}
 
 process.stdin.on("data", (data) => {
   const cmd = data.toString().trim().split(" ");
